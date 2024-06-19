@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <!-- Icons (font awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="main.css" />
+
+    <title>Movies Website | Animated Landing Page</title>
+
+  </head>
+      <body>
+        <!-- Trailer Overlay -->
+        <div class="overlay">
+            <i class="fa-solid fa-x" onclick="closeTrailer();"></i>
+            <div id="movie-trailer"></div>
+        </div>
+        <!-- Header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <img src="assets/logo.svg" alt="logo">
+                </a>
+                <div class="nav_menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#latest" class="active">latest</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#my_list">my list</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#most_watched">most watched</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#subscribe">subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_icons">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <div class="nav_toggle">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </nav>
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Latest Movies -->
+            <div class="latest-movies">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(assets/onward.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">13+</span>
+                            <h3 class="movie-title">onward</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">8.5</p>
+                                <p class="genres">action adventure fantasy </p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(0)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/oppenheimer.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">18+</span>
+                            <h3 class="movie-title">oppen -heimer</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">9.5</p>
+                                <p class="genres">action adventure fantasy drama</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(1)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/looper.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">10+</span>
+                            <h3 class="movie-title">looper</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">7.5</p>
+                                <p class="genres">action adventure fantasy </p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(2)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/small-foot.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">5+</span>
+                            <h3 class="movie-title">small foot</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">6.5</p>
+                                <p class="genres"> adventure fantasy </p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(3)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/free-guy.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">15+</span>
+                            <h3 class="movie-title">free guy</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">8.5</p>
+                                <p class="genres"> adventure fantasy drama</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(4)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/barbie.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">13+</span>
+                            <h3 class="movie-title">barbie</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">7.5</p>
+                                <p class="genres"> adventure fantasy drama</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(5)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/it.jpg);">
+                        <div class="slider__content">
+                            <span class="tag">18+</span>
+                            <h3 class="movie-title">it</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">7.5</p>
+                                <p class="genres">action adventure fantasy horror</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(6)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/wwz.webp);">
+                        <div class="slider__content">
+                            <span class="tag">18+</span>
+                            <h3 class="movie-title">world war Z</h3>
+                            <div class="review">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="rate">4.5</p>
+                                <p class="genres">action adventure fantasy horror</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-primary" onclick="showTrailer(7)"><i class="fa-solid fa-play"></i>trailer</button>
+                                <button class="btn-secondary"><i class="fa-solid fa-circle-plus"></i>add to list</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue Watching -->
+            <div class="continue__watching" id="my_list">
+                <div class="section-titles">
+                    <h2 class="sec-subtitle">total 8 queue </h2>
+                    <h1 class="sec-title">continue watching</h1>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper continue__watching-list">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide list-item">
+                            <img src="assets/stranger-things.jpg" alt="" class="watching__img">
+                            <p class="movie-name">stranger things</p>
+                            <p class="caption">season 5 episode 5</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/penguins.jpeg" alt="" class="watching__img">
+                            <p class="movie-name">penguins</p>
+                            <p class="caption">season 1 episode 2</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/la-casa-de-papel.jpg" alt="" class="watching__img">
+                            <p class="movie-name">la casa de papel</p>
+                            <p class="caption">season 2 episode 2</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/lucifer.webp" alt="" class="watching__img">
+                            <p class="movie-name">lucifer</p>
+                            <p class="caption">season 2 episode 6</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/witcher.jpg" alt="" class="watching__img">
+                            <p class="movie-name">witcher</p>
+                            <p class="caption">season 5 episode 1</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/vikings.jpg" alt="" class="watching__img">
+                            <p class="movie-name">vikings</p>
+                            <p class="caption">season 1 episode 8</p>
+                        </div>
+                        <div class="swiper-slide list-item">
+                            <img src="assets/john-wick.jpg" alt="" class="watching__img">
+                            <p class="movie-name">john wick</p>
+                            <p class="caption">season 3 episode 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Most Watched -->
+             <div class="most__watched" id="most_watched">
+                <div class="most__watched-container">
+                    <div class="section-titles">
+                        <h2 class="sec-subtitle">most watched</h2>
+                        <h1 class="sec-title">the most watched show</h1>
+                    </div>
+                    <div class="movie__description">
+                        <div class="description-container">
+                            <img src="assets/pb-title.png" alt="" class="movie-logo">
+                            <p class="genres">
+                                Peaky Blinders is a crime drama centred on a family of mixed Irish Traveller and
+                                Romani origins based in Birmingham, England, starting in 1919, several months
+                                after the end of the First World War. It centres on the Peaky Blinders street
+                                gang and their ambitious, cunning crime boss Tommy Shelby.
+                                The gang comes to the attention of Major Chester Campbell, a detective chief
+                                inspector in the Royal Irish Constabulary sent over by Winston Churchill from
+                                Belfast, where he had been sent to clean up the city of the Irish Republican Army flying columns,
+                                the Communist Party of Great Britain, street gangs, and common criminals. Winston Churchill
+                                (played by Andy Nyman in series 1 and Richard McCabe in series 2) charges him with suppressing disorder
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <p class="caption">main character</p>
+                                <h3 class="sec-subtitle">Tommy shelby</h3>
+                            </div>
+                            <div>
+                                <p class="caption">first episode</p>
+                                <h3 class="sec-subtitle">bermingham, 1919</h3>
+                            </div>
+                            <div>
+                                <p class="caption">IMBD</p>
+                                <h3 class="sec-subtitle">9.9/10</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" id="subscribe">
+            <div class="apps">
+                <div class="icons">
+                    <i class="fa-brands fa-google-play primary-color"></i>
+                    <i class="fa-brands fa-app-store-ios secondary-color"></i>
+                </div>
+                <p>download our app</p>
+            </div>
+            <div>
+                <div class="subscribe">
+                    <input type="text" placeholder="Enter your Email here">
+                    <button class="subscribe-btn">subscribe</button>
+                </div>
+                <p class="caption">don't miss latest news, subscribe to our newsletter</p>
+            </div>
+            <div class="social">
+                <p class="caption">follow us on social media</p>
+                <div class="icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL REVEAL-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- Main JS File -->
+        <script src="script.js"></script>
+
+  </body>
+</html>
